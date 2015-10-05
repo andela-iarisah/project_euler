@@ -9,6 +9,7 @@ require "./problem_11.rb"
 require "./problem_12.rb"
 require "./problem_13.rb"
 require "./problem_14.rb"
+require "./problem_15.rb"
 
 class EulerTest < Minitest::Test
   def test_5
@@ -95,5 +96,12 @@ class EulerTest < Minitest::Test
     assert_equal([3, 10, 5, 16, 8, 4, 2, 1], collatz_sequence(3))
     assert_equal([4, 2, 1], collatz_sequence(4))
     assert_equal(837799, get_max_num)
+  end
+
+  def test_15
+    assert_equal(false, combination(2,1))
+    assert_equal(20, combination(6,3))
+    assert_equal(6, combination(4,2))
+    assert_equal(70, combination(8,4))
   end
 end
