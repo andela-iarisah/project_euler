@@ -1,7 +1,14 @@
 require "minitest/autorun"
+require "./problem_5.rb"
 require "./problem_6.rb"
 
 class EulerTest < Minitest::Test
+  def test_5
+    assert_equal(true, min_divisible_num(120, 5))
+    assert_equal(true, min_divisible_num(1, 1))
+    assert_equal(false, min_divisible_num(0, 0))
+  end
+
   def test_6
     assert_equal(14, add_squared_num(3))
     assert_equal(0, add_squared_num(0))
