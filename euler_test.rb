@@ -2,6 +2,7 @@ require "minitest/autorun"
 require "./problem_5.rb"
 require "./problem_6.rb"
 require "./problem_7.rb"
+require "./problem_8.rb"
 
 class EulerTest < Minitest::Test
   def test_5
@@ -29,5 +30,10 @@ class EulerTest < Minitest::Test
     assert_equal(false, is_a_prime?(38))
     assert_equal(false, is_a_prime?(1.1))
     assert_equal(true, is_a_prime?(11.0))
+  end
+
+  def test_8
+    assert_equal(12, max_adjacent_numbers_product(1234, 2))
+    assert_equal(0, max_adjacent_numbers_product(1, 2))
   end
 end
