@@ -7,6 +7,7 @@ require "./problem_9.rb"
 require "./problem_10.rb"
 require "./problem_11.rb"
 require "./problem_12.rb"
+require "./problem_13.rb"
 
 class EulerTest < Minitest::Test
   def test_5
@@ -81,5 +82,10 @@ class EulerTest < Minitest::Test
     assert_equal(210, generate_triangle_number_for(20))
     assert_equal([1,55,5,11], tri_num_factors(55))
     assert_equal([1,36, 2, 18, 3, 12, 4, 9, 6], tri_num_factors(36))
+  end
+
+  def test_13
+    assert_equal(10, [1,2,3,4].inject(:+))
+    assert_equal('1234512345', first_ten(12345123451))
   end
 end
