@@ -4,6 +4,7 @@ require "./problem_6.rb"
 require "./problem_7.rb"
 require "./problem_8.rb"
 require "./problem_9.rb"
+require "./problem_10.rb"
 
 class EulerTest < Minitest::Test
   def test_5
@@ -42,5 +43,10 @@ class EulerTest < Minitest::Test
     assert_equal(false, pythagoras(10))
     assert_equal(60, pythagoras(12))
     assert_equal(false, pythagoras(20))
+  end
+
+  def test_10
+    assert_equal(10, prime_sum(5))
+    assert_equal(false, prime_sum(0))
   end
 end
