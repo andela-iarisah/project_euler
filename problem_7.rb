@@ -2,9 +2,7 @@ def is_a_prime?(num)
   return false if (num < 2 || num % 1 != 0)
 
   (2...num).each do |n|
-    if num % n == 0
-      return false
-    end
+    return false if num % n == 0
   end
 
   true
