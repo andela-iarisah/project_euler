@@ -1,5 +1,6 @@
 def add_squared_num(i)
   squared = 0
+  return false if i < 1
 
   1.upto(i) { |n| squared += n**2 }
 
@@ -8,6 +9,7 @@ end
 
 def square_and_add_num(i)
   added = 0
+  return false if i < 1
 
   1.upto(i) { |n| added += n }
 
